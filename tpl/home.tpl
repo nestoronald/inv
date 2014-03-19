@@ -1,0 +1,60 @@
+{extends file='tpl/base.tpl'}
+{block name=cabecera}
+            <div class="slider-igp">
+                <img src="./static/img/demo_home.jpg" alt="" />
+            </div>
+{/block}
+{block name=contenido}
+<div class="row-fluid">
+    <div class="span12">
+    <h4>Bienvenidos</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, velit, porro, molestiae facere fugit sed voluptates dignissimos laborum explicabo libero sint cumque id facilis ab veniam adipisci ipsam veritatis dolor!.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, odio, tempore, tempora, explicabo architecto facilis magni possimus alias ut neque dolor pariatur odit veniam impedit deleniti dicta nemo. Porro, explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, inventore necessitatibus nemo minima laboriosam nihil architecto tempora incidunt blanditiis iure saepe pariatur adipisci earum ducimus itaque et temporibus impedit ullam?</p>
+    </div>
+
+</div>
+<br>
+<div class="container-fluid last-news">
+<div class="span4">
+    <h4 class="title1">Blog</h4>
+    <ul>
+    <li><a class="thumb" href="#"><img src="./static/img/timthumb.jpeg" alt=""> </a><span class="title"><a href="http://www.ceab.csic.es/web/?p=13358" rel="bookmark">Climate change and Mediterranean seagrass meadows: a synopsis for environmental managers</a></span><br><span class="wpldate">March 3, 2014</span></li>
+    <li><a class="thumb" href="#"><img src="./static/img/timthumb-02.jpeg" alt=""> </a><span class="title"><a href="http://www.ceab.csic.es/web/?p=13327" rel="bookmark">INSPIRACIENCIA</a></span><br><span class="wpldate">February 27, 2014</span></li>
+    <li><a class="thumb" href="#" title="Buscamos Técnico Superior de Grado II (Formación Profesional II), con perfil en " informatica="" y="" comunicaciones""=""><img src="./static/img/timthumb-03.jpeg" alt=""> </a><span class="title"><a href="http://www.ceab.csic.es/web/?p=13111" rel="bookmark">Buscamos Técnico Superior de Grado II (Formación Profesional II), con perfil en “Informatica y Comunicaciones”</a></span><br><span class="wpldate">February 24, 2014</span></li>
+
+    </ul>
+</div>
+<div class="span4">
+    <h4 class="title1">Publicaciones</h4>
+    <ul>
+    <li><a class="thumb" href="#" title="“Connectivity of coral reef populations:  you can't always get where you want”"><img src="./static/img/timthumb-02.jpeg" alt=""> </a><span class="title"><a href="http://www.ceab.csic.es/web/?p=13374" rel="bookmark">“Connectivity of coral reef populations:  you can’t always get where you want”</a></span><br><span class="wpldate">March 5, 2014</span></li>
+    <li><a class="thumb" href="#" title="Què aporta la genètica a l’estudi de les espècies marines invasores a Europa?"><img src="./static/img/timthumb.01.jpeg" alt=""> </a><span class="title"><a href="http://www.ceab.csic.es/web/?p=13348" rel="bookmark">Què aporta la genètica a l’estudi de les espècies marines invasores a Europa?</a></span><br><span class="wpldate">February 28, 2014</span></li>
+    <li><a class="thumb" href="#" title="“Fine Particle Transport and Retention in Streams: Particulate Organic Carbon Dynamics and Pathogen Transmission”"><img src="./static/img/timthumb-03.jpeg" alt=""> </a><span class="title"><a href="http://www.ceab.csic.es/web/?p=13287" rel="bookmark">“Fine Particle Transport and Retention in Streams: Particulate Organic Carbon Dynamics and Pathogen Transmission”</a></span><br><span class="wpldate">February 10, 2014</span></li>
+    </ul>
+</div>
+<div class="span4">
+    <h4 class="title1">Noticias</h4>
+    <ul>
+    <li><a class="thumb" href="#" title="Buscamos Técnico Superior de Grado II (Formación Profesional II), con perfil en " informatica="" y="" comunicaciones""=""><img src="./static/img/timthumb-03.jpeg" alt=""> </a><span class="title"><a href="http://www.ceab.csic.es/web/?p=13111" rel="bookmark">Buscamos Técnico Superior de Grado II (Formación Profesional II), con perfil en “Informatica y Comunicaciones”</a></span><br><span class="wpldate">February 24, 2014</span></li>
+    <li><a class="thumb" href="#" title="Prospeccions de gas i petroli a les Balears."><img src="./static/img/timthumb-02.jpeg" alt=""> </a><span class="title"><a href="http://www.ceab.csic.es/web/?p=13309" rel="bookmark">Prospeccions de gas i petroli a les Balears.</a></span><br><span class="wpldate">February 19, 2014</span></li>
+    <li><a class="thumb" href="#">  </a><span class="title"><a href="http://www.ceab.csic.es/web/?p=13252" rel="bookmark"><img src="./static/img/timthumb-01.jpeg" alt="">Xerrada-col·loqui: “S’Abanell: Sorra o roques? Sis anys després”</a></span><br><span class="wpldate">February 4, 2014</span></li>
+    </ul>
+<p></p>
+</div>
+</div>
+<div class="container-fluid igp-bottom">
+    <div class="span3 igp-panel-box">
+        <p class="text-large"><a title="Catálogo de Biblioteca - IGP" target="_blank" href="#"> <img border="0" alt="" src="./static/img/logo-biblioteca.jpg"></a></p>
+    </div>
+    <div class="span3 igp-panel-box" >
+        <p class="text-large"><a title="Buscador Cientifico" target="_blank" href="http://directorio.concytec.gob.pe/buscadorcientifico/#busquedaCtel"> <img border="0" alt="" src="./static/img/buscador-cientifico.jpg"></a></p>
+    </div>
+    <div class="span3 igp-panel-box" >
+        <p class="text-large"><a title="Publicaciones IGP" target="_blank" href="#"> <img border="0" alt="" src="./static/img/publicaciones-igp.jpg"></a></p>
+    </div>
+    <div class="span3 igp-panel-box" >
+        <p class="text-large"><a title="Eventos Cientificos" target="_blank" href="http://www.igp.gob.pe/portal/images/documents/daa/aa/eventose/calendarioact.pdf"> <img border="0" alt="" src="./static/img/eventos-cientificos.jpg"></a></p>
+    </div>
+</div>
+<br>
+{/block}

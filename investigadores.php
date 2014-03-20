@@ -26,8 +26,11 @@
     }
  }
 
- function lista_inv(){
- 	$result=InvQuery();
+ function lista_inv($name=""){
+    if (isset($_POST["nombre"]) and $_POST["nombre"]!="" ) {
+        $name = $_POST["nombre"];
+    }
+ 	$result=ListInvQuery($name);
  	$html = "";
  	if (isset($result)) {
  	    if ($result["Count"]>0) {

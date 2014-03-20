@@ -21,6 +21,13 @@
     color: #FFFFFF;
     text-align: center;
 }
+.main-igp a {
+    color: #737475;
+    text-decoration: none;
+}
+.main-igp a:hover, .main-igp a:focus {
+    color: #212222;
+}
 
 a.mostaza {
     color: #BD852D; text-decoration: none;
@@ -597,10 +604,12 @@ td a img{
     background: #CCC9C9;
     border: 0;
     border-radius: 0;
-    margin-left: -4px;
-    padding: 5px 10px 7px;
+    /*padding: 5px 10px 7px;
     line-height: 20px;
-    margin: 0 0 0 -4px;
+    margin: 0 0 0 -4px;*/
+    padding: 4px 10px 5px;
+    line-height: 20px;
+    margin: 0;
 }
 .navbar .title{
     color:#fff;
@@ -649,8 +658,11 @@ li {
 /*menu pestañas*/
 .profile .nav-sidebar li a {
     border: 1px solid #E5E5E5;
-    padding: 8px 14px;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 0.6em 0.4em;
 }
+
 .profile .nav-list>li>a {
     margin: 0;
 }
@@ -663,6 +675,8 @@ li {
 }
 .profile img {
     margin-left: 1em;
+    height: 286px;
+    width: 100%;
 }
 .line-h{
     padding: 5px 0;
@@ -690,11 +704,11 @@ li {
     border-color: #797676;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#797676',endColorstr='#050505',GradientType=0);
 }
-#header .nav li a {
+#header .navbar a, #header .nav li a { /*.nav li*/
     text-shadow: none;
     color: #E4E1E1;
 }
-#header .nav li a:hover {
+#header .navbar a:hover, #header .nav li a:hover {
     color: #fff;
 }
 .box-igp-1 .second{
@@ -708,7 +722,14 @@ h2.title-profile{
     border-bottom: 3px solid #ccc;
     margin: 0.3em 1em;
     padding-bottom: 0.1em;
+    font-size: 2em;
 }
 .main-igp .table th, .main-igp .table td {
-    padding: 7px;
+    padding: 0.4em;
+    font-size: 0.8em;
 }
+#listainv{
+    margin-top: 2.3em;
+    margin-left: 2em;
+}
+

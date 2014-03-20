@@ -1,7 +1,7 @@
 {extends file='tpl/base.tpl'}
     {block name=cabecera}
       {if $details!=-100}
-          <div class="row-fluid"><h2 class="title-profile">{$details.empleado_name}</h2></div>
+          <div class="row-fluid"><h2 class="title-profile">{$details.empleado_name}, {$details.empleado_surname}</h2></div>
       {/if}
     {/block}
     {block name=contenido}
@@ -17,8 +17,8 @@
           <div class="span7">
               <h4>Datos personales</h4>
               <div class="igp-block">
-                <p>Web personal:  <a href="#" target="_blank">$web personals</a></p>
-                <p>Pais de Nacimiento:  { $details.pais_nacimiento }</p>
+                <p>Web personal:  <a href="#" target="_blank">www.igp.gob.pe/investigadores/{$details.correo_igp}</a></p>
+                <p>Pais de Nacimiento:  { $details.pais_nacimiento } </p>
                 <h5>Residencia</h5>
                 <p> <span class="igp-panel-box">Pais: </span> { $details.pais }</p>
                 <p> <span class="igp-panel-box">Región: </span> { $details.region }</p>
@@ -43,6 +43,8 @@
           <div class="line-h" id="midescripcion">
             <p>
                 <span class="igp-panel-box">Resume </span>: { $details.resumen }
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, a, deserunt, aliquid ratione optio similique maiores debitis blanditiis molestias id aut repudiandae assumenda molestiae ab laboriosam culpa quis est eaque.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, eligendi, quibusdam, labore culpa dolorum dolores amet iste dignissimos corrupti repellendus repudiandae a necessitatibus ex. Quia voluptatem dolorum eligendi placeat accusamus!
             </p>
           </div>
           <div class="line-h" id="datos-academicos">
@@ -60,6 +62,16 @@
                   </tr>
                 </thead>
                 <tbody>
+                  {section name=sec1 loop=$details.academic}
+                  <tr>
+                    <td>{$details.academic[sec1].grado}</td>
+                    <td>{$details.academic[sec1].titulo}</td>
+                    <td>{$details.academic[sec1].centro_estudios}</td>
+                    <td>-</td>
+                    <td>{$details.academic[sec1].mes_ini}/{$details.academic[sec1].ano_ini}</td>
+                    <td>{$details.academic[sec1].mes_fin}/{$details.academic[sec1].ano_fin}</td>
+                  </tr>
+                  {/section}
                 </tbody>
               </table>
             </div>
@@ -71,13 +83,22 @@
                 <thead>
                   <tr>
                   <th>Idioma</th>
-                  <th>Letra</th>
+                  <th>Lectura</th>
                   <th>Conservación</th>
                   <th>Escritura</th>
                   <th>Lengua Materna</th>
                   </tr>
                 </thead>
                 <tbody>
+                  {section name=sec1 loop=$details.languaje}
+                  <tr>
+                    <td>{$details.languaje[sec1].idioma}</td>
+                    <td>{$details.languaje[sec1].leido_actual}</td>
+                    <td>{$details.languaje[sec1].escrito_actual}</td>
+                    <td>{$details.languaje[sec1].hablado_actual}</td>
+                    <td> </td>
+                  </tr>
+                  {/section}
                 </tbody>
               </table>
             </div>
@@ -114,6 +135,14 @@
                   </tr>
                 </thead>
                 <tbody>
+                  {section name=sec1 loop=$details.its}
+                  <tr>
+                    <td>{$details.its[sec1].tipo}</td>
+                    <td>{$details.its[sec1].titulo}</td>
+                    <td>{$details.its[sec1].fx_produccion}</td>
+                    <td></td>
+                  </tr>
+                  {/section}
                 </tbody>
               </table>
             </div>
@@ -122,11 +151,25 @@
       </div>
       <div class="span3 sidebar">
         <div class="box-igp-1">
-          <h4>Mis Publicaciones</h4>
+          <h4>Ultimas Publicaciones</h4>
           <ul>
             <li><a href="#">Climate change and Mediterranean seagrass meadows</a></li>
             <li><a href="#">Prospeccions de gas i petroli a les Balears</a></li>
             <li><a href="#">Què aporta la genètica a l’estudi de les espècies marines invasores a Europa?</a></li>
+            {section name=sec1 loop=$details.its}
+                  <li>
+                    <a href="#">{$details.its[sec1].titulo}
+                    <span>{$details.its[sec1].fx_produccion}</span></a>
+
+                  </li>
+            {/section}
+            {if $details.its }
+            {for $foo=0 to 2}
+                <li><a href="#">{$details.its.{$foo}.titulo}
+                    <span>{$details.its.{$foo}.fx_produccion}</span></a>
+                </li>
+            {/for}
+            {/if}
           </ul>
 
         </div>

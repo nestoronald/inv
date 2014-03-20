@@ -35,13 +35,10 @@
                                <span>Menu</span>
                             </button>
                             <a class="navbar-brand inline fleft title" href="index.php"><h4>Investigadores</h4></a>
-                            <form class="navbar-form inline">
-
-                                            <input type="text" placeholder="Buscar Investigadores" class="form-control search-input span4">
-
-                                            <a class="btn search-btn" href="./investigadores.php"><i class="icon-search"></i></a>
-
-
+                            <form class="navbar-form inline" method="post" action="investigadores.php">
+                                <input type="text" name="nombre" placeholder="Buscar Investigadores" class="form-control search-input span4">
+                                <!-- <a class="btn search-btn" href="./investigadores.php"><i class="icon-search"></i></a> -->
+                                <input type="submit" value="buscar" class="btn search-btn" />
                             </form>
                             </div>
                             <div class="nav-collapse collapse inline fright ">
@@ -66,7 +63,7 @@
                                          </span>
                                      </li>
                                     {else}
-                                    <li><a href="login.php"> Ingresar </a></li>
+                                    <!-- <li><a href="login.php"> Ingresar </a></li> -->
                                     {/if }
                                 </ul>
                             </div>
@@ -80,7 +77,7 @@
 
             {/block}
         </div>
-          <!-- <hr class="space"> -->
+
           <div class="last container-fluid" id="contenido_inv">
                 <div class="row-fluid">
                     {block name=contenido} {/block}

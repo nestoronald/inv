@@ -1,9 +1,8 @@
 {extends file='tpl/base.tpl'}
 
 {block name=cabecera}
-        <h3>Lista de Investigadores</h3>
 {/block}
 {block name=contenido}
-            {$lista}
+    <div id="listainv">{$lista}</div>
 {/block}
 

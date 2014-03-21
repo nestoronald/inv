@@ -31,17 +31,18 @@
         $name = $_POST["nombre"];
     }
  	$result=ListInvQuery($name);
- 	$html = "";
+ 	$html = "<ul>";
  	if (isset($result)) {
  	    if ($result["Count"]>0) {
  	        for ($i=0; $i < $result["Count"]; $i++) {
- 	            $html .="<div class='art'>";
+ 	            $html .="<div class='art'> <li>";
  	            $html.="	<h4>";
  	            $html.="	<a href='./investigadores.php?id=".$result["idempleado"][$i]."'>".$result["empleado_name"][$i].", ".$result["empleado_surname"][$i]."</a>";
- 	            $html .="	</h4>
+ 	            $html .="	</h4> </li>
  	            		</div><hr />";
  	        }
  	    }
+        $html.="</ul>";
  	}
  	return $html;
   }

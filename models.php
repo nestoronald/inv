@@ -21,7 +21,7 @@
 	    $sql = "SELECT * FROM v_investigadores ";
 	    // $sql = "SELECT * FROM v_investigadores ";
 	    if (trim($name)!="") {
-	    	$sql .= "and ( empleado_name like '%".$name."%' or empleado_surname like '%".$name."%') ";
+	    	$sql .= "where ( empleado_name like '%".$name."%' or empleado_surname like '%".$name."%') ";
 	    }
 
 	    $i=0;
@@ -72,7 +72,19 @@
 					$result["academic"] = $stmt->fetchAll();
 					if ($stmt->rowCount() >= 1) {
 						return $result;
+						if (PublicationQuery($id)!=-100) {
+							$result["publication"] = PublicationQuery($id);
+						}
+						else{
+							return $result;
+						}
 					}
+					else{
+						return $result;
+					}
+				}
+				else{
+					return $result;
 				}
 
 			}
@@ -120,10 +132,16 @@
 		// $dbh=conn_0("10.10.30.27","personal","wmaster","igpwmaster");
 		$dbh=conn("DB_ITS","wmaster","igpwmaster");
 		$dbh->query("SET NAMES 'utf8'");
-		if ($stmt = $dbh->prepare("SELECT * FROM v_empleado_laboral_cargo WHERE idempleado = ? and idcargo in(4,5,6,69,70,71,72,73,74,75,89) LIMIT 1")) {
-		// if ($stmt = $dbh->prepare("SELECT * FROM v_investigadores  LIMIT 1")) {
+		if ($id==56) {
+			$id=78;
+		}
+		if ($id==45) {
+			$id =50;
+		}
+		if ($stmt = $dbh->prepare("SELECT * FROM v_publicacion_autor WHERE idempleado = ? LIMIT 1")) {
 			$stmt->execute(array($id));
-			$result=$stmt->fetch(PDO::FETCH_ASSOC);
+			// $result=$stmt->fetch(PDO::FETCH_ASSOC);
+			$result=$stmt->fetchAll();;
 
 			if($stmt->rowCount() == 1) {// investigador existe
 				return $result;

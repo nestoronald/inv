@@ -71,9 +71,11 @@
 					$stmt->execute(array($dni));
 					$result["academic"] = $stmt->fetchAll();
 					if ($stmt->rowCount() >= 1) {
-						return $result;
-						if (PublicationQuery($id)!=-100) {
+						// return $result;
+						$consulta = PublicationQuery($id);
+						if ($consulta!=-100) {
 							$result["publication"] = PublicationQuery($id);
+							return $result;
 						}
 						else{
 							return $result;
@@ -129,21 +131,66 @@
 	}
 
 	function PublicationQuery($id=0){
-		// $dbh=conn_0("10.10.30.27","personal","wmaster","igpwmaster");
-		$dbh=conn("DB_ITS","wmaster","igpwmaster");
+		// $dbh=conn_0("10.10.30.25","DB_ITS","wmaster","igpwmaster");
+		$dbh=conx("DB_ITS","wmaster","igpwmaster");
 		$dbh->query("SET NAMES 'utf8'");
-		if ($id==56) {
-			$id=78;
+		switch ($id) {
+			//milla
+			case 177:
+				$idauthor = 271;
+				break;
+			//Ishitsuka
+			case 16:
+				$idauthor = 656;
+				break;
+			//Norabuena
+			case 31:
+				$idauthor = 712;
+				break;
+			//Silva
+			case 61:
+				$idauthor = 775;
+				break;
+			//Takahashi Guevara
+			case 66:
+				$idauthor = 745;
+				break;
+			//Lagos
+			case 23:
+				$idauthor = 773;
+				break;
+			//Martinez Grimaldo
+			case 23:
+				$idauthor = 772;
+				break;
+			//Tavera
+			case 36:
+				$idauthor = 590;
+				break;
+			//Bernal Esquia
+			case 37:
+				$idauthor = 591;
+				break;
+			//Macedo Sanchez
+			case 47:
+				$idauthor = 827;
+				break;
+			//Espinoza
+			case 67:
+				$idauthor = 986;
+				break;
+
+			default:
+				# code...
+				break;
 		}
-		if ($id==45) {
-			$id =50;
-		}
-		if ($stmt = $dbh->prepare("SELECT * FROM v_publicacion_autor WHERE idempleado = ? LIMIT 1")) {
-			$stmt->execute(array($id));
+
+		if ($stmt = $dbh->prepare("SELECT * FROM v_publicacion_autor  WHERE idautor = ? ")) {
+			$stmt->execute(array($idauthor));
 			// $result=$stmt->fetch(PDO::FETCH_ASSOC);
 			$result=$stmt->fetchAll();;
 
-			if($stmt->rowCount() == 1) {// investigador existe
+			if($stmt->rowCount() >= 1) {// investigador existe
 				return $result;
 			}
 			else{
@@ -156,26 +203,27 @@
 		$dbh = null;
 
 	}
-	function LanguajeQuery($iduser=0){
-		// $dbh=conn_0("10.10.30.27","personal","wmaster","igpwmaster");
-		$dbh=conn("DB_ITS","wmaster","igpwmaster");
-		$dbh->query("SET NAMES 'utf8'");
-		if ($stmt = $dbh->prepare(" SELECT  * FROM  v_empleado_idioma")) {
-		// if ($stmt = $dbh->prepare("SELECT * FROM v_investigadores  LIMIT 1")) {
-			$stmt->execute(array($id));
-			$result=$stmt->fetch(PDO::FETCH_ASSOC);
-			if($stmt->rowCount() == 1) {// investigador existe
-				return $result;
-			}
-			else{
-				return -100;
-			}
-		}
-		else{
-			return -100;
-		}
-		$dbh = null;
+	// function LanguajeQuery($iduser=0){
+	// 	$dbh=conn_0("10.10.30.25","DB_ITS","wmaster","igpwmaster");
+	// 	// $dbh=conn("DB_ITS","wmaster","igpwmaster");
 
-	}
+	// 	$dbh->query("SET NAMES 'utf8'");
+	// 	if ($stmt = $dbh->prepare(" SELECT  * FROM  v_empleado_idioma")) {
+	// 	// if ($stmt = $dbh->prepare("SELECT * FROM v_investigadores  LIMIT 1")) {
+	// 		$stmt->execute(array($id));
+	// 		$result=$stmt->fetch(PDO::FETCH_ASSOC);
+	// 		if($stmt->rowCount() == 1) {// investigador existe
+	// 			return $result;
+	// 		}
+	// 		else{
+	// 			return -100;
+	// 		}
+	// 	}
+	// 	else{
+	// 		return -100;
+	// 	}
+	// 	$dbh = null;
+
+	// }
 
 ?>

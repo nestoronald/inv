@@ -25,6 +25,20 @@
         return -100;
     }
  }
+ function details_publication($id=0){
+    $result=PublicationQuery($id);
+    if (isset($result)) {
+        if ($result!=-100) {
+            return $result;
+        }
+        else{
+            return -100;
+        }
+    }
+    else{
+        return -100;
+    }
+ }
 
  function lista_inv($name=""){
     if (isset($_POST["nombre"]) and $_POST["nombre"]!="" ) {

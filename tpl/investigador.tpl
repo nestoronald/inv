@@ -1,7 +1,7 @@
 {extends file='tpl/base.tpl'}
     {block name=cabecera}
       {if $details!=-100}
-          <div class="row-fluid"><h2 class="title-profile">{$details.empleado_name}, {$details.empleado_surname}</h2></div>
+          <div class="row-fluid"><h2 class="title-profile">{$details.empleado_name}, {$details.empleado_surname}</h2> {$details.publication.0.idautor}</div>
       {/if}
     {/block}
     {block name=contenido}
@@ -12,6 +12,7 @@
         <div class="menu-perfil span12">
           <div class="span5">
               {assign var=url value="http://www.igp.gob.pe/capacidades_igp/img/fotos/{$details.empleado_dni}.jpg" scope="global"}
+
               <img class="perfil fleft" src="{$url}" alt="">
           </div>
           <div class="span7">
@@ -35,7 +36,7 @@
               <li class="active"> <a href="#midescripcion">Mi descripción</a></li>
               <li><a href="#datos-academicos">Datos Académicos</a></li>
               <li><a href="#idiomas">Idiomas</a></li>
-              <li><a href="#proyectos-investigacion">Proyectos de Investigacion</a></li>
+              <!-- <li><a href="#proyectos-investigacion">Proyectos de Investigacion</a></li> -->
               <li><a href="#producción-cientifica">Producción Cientifica</a></li>
             </ul>
             </div>
@@ -103,7 +104,7 @@
               </table>
             </div>
           </div>
-          <div class="line-h" id="proyectos-investigacion">
+          <!-- <div class="line-h" id="proyectos-investigacion">
             <h4>Proyectos de Investigación</h4>
             <div class="igp-block">
               <table class="table table-striped table-bordered">
@@ -121,7 +122,7 @@
                 </tbody>
               </table>
             </div>
-          </div>
+          </div> -->
           <div class="line-h" id="producción-cientifica">
             <h4>Producción Cientifica</h4>
             <div class="igp-block">
@@ -131,16 +132,15 @@
                   <th>Tipo de Producción</th>
                   <th>Título</th>
                   <th>Fecha de Producción</th>
-                  <th>Palabras clave</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {section name=sec1 loop=$details.its}
+                  {section name=sec1 loop=$details.publication}
                   <tr>
-                    <td>{$details.its[sec1].tipo}</td>
-                    <td>{$details.its[sec1].titulo}</td>
-                    <td>{$details.its[sec1].fx_produccion}</td>
-                    <td></td>
+                    <td>{$details.publication[sec1].subcategory_description}</td>
+                    <td>{$details.publication[sec1].titulo}</td>
+                    <td>{$details.publication[sec1].month_pub}/{$details.publication[sec1].year_pub}</td>
+
                   </tr>
                   {/section}
                 </tbody>
@@ -153,20 +153,13 @@
         <div class="box-igp-1">
           <h4>Ultimas Publicaciones</h4>
           <ul>
-            <li><a href="#">Climate change and Mediterranean seagrass meadows</a></li>
-            <li><a href="#">Prospeccions de gas i petroli a les Balears</a></li>
-            <li><a href="#">Què aporta la genètica a l’estudi de les espècies marines invasores a Europa?</a></li>
-            {section name=sec1 loop=$details.its}
-                  <li>
-                    <a href="#">{$details.its[sec1].titulo}
-                    <span>{$details.its[sec1].fx_produccion}</span></a>
 
-                  </li>
-            {/section}
-            {if $details.its }
+            {if $details.publication }
+            {assign var=url value="http://www.igp.gob.pe/its/index.php?idfrom=3&idautor={$details.publication.0.idautor}&iddata=" scope="global"}
             {for $foo=0 to 2}
-                <li><a href="#">{$details.its.{$foo}.titulo}
-                    <span>{$details.its.{$foo}.fx_produccion}</span></a>
+                {assign var=data value="{$details.publication.{$foo}.iddata}&pag=2" }
+                <li><a target="_blank" href="{$url}{$data}">{$details.publication.{$foo}.titulo}
+                    <span>{$details.publication.{$foo}.fx_produccion}</span></a>
                 </li>
             {/for}
             {/if}

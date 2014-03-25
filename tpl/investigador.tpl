@@ -1,7 +1,7 @@
 {extends file='tpl/base.tpl'}
     {block name=cabecera}
       {if $details!=-100}
-          <div class="row-fluid"><h2 class="title-profile">{$details.empleado_name}, {$details.empleado_surname}</h2> {$details.publication.0.idautor}</div>
+          <div class="row-fluid"><h2 class="title-profile">{$details.empleado_name}, {$details.empleado_surname}</h2> </div>
       {/if}
     {/block}
     {block name=contenido}
@@ -19,12 +19,12 @@
               <h4>Datos personales</h4>
               <div class="igp-block">
                 <p>Web personal:  <a href="#" target="_blank">www.igp.gob.pe/investigadores/{$details.correo_igp}</a></p>
-                <p>Pais de Nacimiento:  { $details.pais_nacimiento } </p>
+                <p>Pais de Nacimiento: {$details.pais_nacimiento}   </p>
                 <h5>Residencia</h5>
-                <p> <span class="igp-panel-box">Pais: </span> { $details.pais }</p>
-                <p> <span class="igp-panel-box">Región: </span> { $details.region }</p>
-                <p> <span class="igp-panel-box">Provincia: </span> { $details.provincia }</p>
-                <p> <span class="igp-panel-box">Distrito:</span>  { $details.distrito }</p>
+                <p> <span class="igp-panel-box">Pais: </span> Peru</p>
+                <p> <span class="igp-panel-box">Región: </span>Lima</p>
+                <p> <span class="igp-panel-box">Provincia: </span>Lima</p>
+                <p> <span class="igp-panel-box">Distrito:</span>{$details.distrito_residencia} </p>
               </div>
           </div>
 
@@ -43,9 +43,11 @@
 
           <div class="line-h" id="midescripcion">
             <p>
-                <span class="igp-panel-box">Resume </span>: { $details.resumen }
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, a, deserunt, aliquid ratione optio similique maiores debitis blanditiis molestias id aut repudiandae assumenda molestiae ab laboriosam culpa quis est eaque.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, eligendi, quibusdam, labore culpa dolorum dolores amet iste dignissimos corrupti repellendus repudiandae a necessitatibus ex. Quia voluptatem dolorum eligendi placeat accusamus!
+                <span class="igp-panel-box">Resumen </span>:
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, a, deserunt, aliquid ratione optio similique maiores debitis blanditiis molestias id aut repudiandae assumenda molestiae ab laboriosam culpa quis est eaque.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, eligendi, quibusdam, labore culpa dolorum dolores amet iste dignissimos corrupti repellendus repudiandae a necessitatibus ex. Quia voluptatem dolorum eligendi placeat accusamus!.</p>
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, tempore, temporibus libero nesciunt tenetur sequi ratione velit iste accusamus quas unde numquam vel ea provident ducimus deleniti exercitationem labore nemo!</p>
             </p>
           </div>
           <div class="line-h" id="datos-academicos">
@@ -87,7 +89,7 @@
                   <th>Lectura</th>
                   <th>Conservación</th>
                   <th>Escritura</th>
-                  <th>Lengua Materna</th>
+                  <!-- <th>Lengua Materna</th> -->
                   </tr>
                 </thead>
                 <tbody>
@@ -97,7 +99,7 @@
                     <td>{$details.languaje[sec1].leido_actual}</td>
                     <td>{$details.languaje[sec1].escrito_actual}</td>
                     <td>{$details.languaje[sec1].hablado_actual}</td>
-                    <td> </td>
+                    <!-- <td> </td> -->
                   </tr>
                   {/section}
                 </tbody>

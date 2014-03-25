@@ -56,7 +56,7 @@
 		// $dbh=conn_0("10.10.30.27","personal","wmaster","igpwmaster");
 		$dbh=conn("personal","wmaster","igpwmaster");
 		$dbh->query("SET NAMES 'utf8'");
-		if ($stmt = $dbh->prepare("SELECT * FROM v_investigadores WHERE idempleado = ? LIMIT 1")) {
+		if ($stmt = $dbh->prepare("SELECT * FROM v_empleado_laboral_cargo WHERE idempleado = ? LIMIT 1")) {
 		// if ($stmt = $dbh->prepare("SELECT * FROM v_investigadores  LIMIT 1")) {
 			$stmt->execute(array($id));
 			$result=$stmt->fetch(PDO::FETCH_ASSOC);
@@ -188,7 +188,7 @@
 		if ($stmt = $dbh->prepare("SELECT * FROM v_publicacion_autor  WHERE idautor = ? ")) {
 			$stmt->execute(array($idauthor));
 			// $result=$stmt->fetch(PDO::FETCH_ASSOC);
-			$result=$stmt->fetchAll();;
+			$result=$stmt->fetchAll();
 
 			if($stmt->rowCount() >= 1) {// investigador existe
 				return $result;

@@ -621,12 +621,11 @@ td a img{
     height: 165px;
 }
 .box-igp-1 {
-    padding: 13px;
     border: 1px solid #ccc;
     box-shadow: 0 0 7px #ccc;
     border-radius: 5px 5px 0 0;
     margin: 1.5em 0;
-    background: #ccc;
+    padding: 13px;
 }
 li {
     list-style: none;
@@ -733,4 +732,9 @@ h2.title-profile{
     margin-top: 2.3em;
     margin-left: 2em;
 }
-
+.main-igp .table-striped tbody > tr:nth-child(2n+1) > td, .table-striped tbody > tr:nth-child(2n+1) > th{
+    background: none;
+}
+.main-igp .table-striped th, .box-igp-1 {
+    background: #EEEDEB;
+}

@@ -59,7 +59,7 @@
                   <th>Grado</th>
                   <th>Titulo</th>
                   <th>Centro de Estudios</th>
-                  <th>País de estudios</th>
+                  <!-- <th>País de estudios</th> -->
                   <th>Fecha de Inicio</th>
                   <th>Fecha finalizó</th>
                   </tr>
@@ -70,7 +70,7 @@
                     <td>{$details.academic[sec1].grado}</td>
                     <td>{$details.academic[sec1].titulo}</td>
                     <td>{$details.academic[sec1].centro_estudios}</td>
-                    <td>-</td>
+                    <!-- <td>-</td> -->
                     <td>{$details.academic[sec1].mes_ini}/{$details.academic[sec1].ano_ini}</td>
                     <td>{$details.academic[sec1].mes_fin}/{$details.academic[sec1].ano_fin}</td>
                   </tr>

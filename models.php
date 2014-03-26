@@ -18,7 +18,7 @@
 		// $dbh=conn_0("10.10.30.27","personal","wmaster","igpwmaster");
 		$dbh=conn("personal","wmaster","igpwmaster");
 		$dbh->query("SET NAMES 'utf8'");
-	    $sql = "SELECT * FROM v_investigadores ";
+	    $sql = "SELECT * FROM v_empleado_investigador ";
 	    // $sql = "SELECT * FROM v_investigadores ";
 	    if (trim($name)!="") {
 	    	$sql .= "where ( empleado_name like '%".$name."%' or empleado_surname like '%".$name."%') ";
@@ -56,12 +56,17 @@
 		// $dbh=conn_0("10.10.30.27","personal","wmaster","igpwmaster");
 		$dbh=conn("personal","wmaster","igpwmaster");
 		$dbh->query("SET NAMES 'utf8'");
-		if ($stmt = $dbh->prepare("SELECT * FROM v_empleado_laboral_cargo WHERE idempleado = ? LIMIT 1")) {
+		if ($stmt = $dbh->prepare("SELECT * FROM v_empleado_investigador WHERE idempleado = ? LIMIT 1")) {
 		// if ($stmt = $dbh->prepare("SELECT * FROM v_investigadores  LIMIT 1")) {
 			$stmt->execute(array($id));
 			$result=$stmt->fetch(PDO::FETCH_ASSOC);
 			$dni= $result["empleado_dni"];
 			if($stmt->rowCount() == 1) {// investigador existe
+				$consulta = PublicationQuery($id);
+				if ($consulta!=-100) {
+					$result["publication"] = PublicationQuery($id);
+				}
+
 				$stmt = $dbh->prepare("SELECT * FROM v_empleado_idioma  WHERE dni = ? ");
 				$stmt->execute(array($dni));
 				// $result["languaje"] = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -72,14 +77,15 @@
 					$result["academic"] = $stmt->fetchAll();
 					if ($stmt->rowCount() >= 1) {
 						// return $result;
-						$consulta = PublicationQuery($id);
-						if ($consulta!=-100) {
-							$result["publication"] = PublicationQuery($id);
-							return $result;
-						}
-						else{
-							return $result;
-						}
+						// $consulta = PublicationQuery($id);
+						// if ($consulta!=-100) {
+						// 	$result["publication"] = PublicationQuery($id);
+						// 	return $result;
+						// }
+						// else{
+						// 	return $result;
+						// }
+						return $result;
 					}
 					else{
 						return $result;
@@ -135,7 +141,14 @@
 		$dbh=conx("DB_ITS","wmaster","igpwmaster");
 		$dbh->query("SET NAMES 'utf8'");
 		switch ($id) {
-			//milla
+			//Woodman
+			case 1:
+				$idauthor = 523;
+				break;
+			//machare
+			case 2:
+				$idauthor = 241;
+				break;
 			case 177:
 				$idauthor = 271;
 				break;
@@ -181,13 +194,12 @@
 				break;
 
 			default:
-				# code...
 				break;
 		}
-
+		// $idauthor = 523;
 		if ($stmt = $dbh->prepare("SELECT * FROM v_publicacion_autor  WHERE idautor = ? ")) {
 			$stmt->execute(array($idauthor));
-			// $result=$stmt->fetch(PDO::FETCH_ASSOC);
+			// $stmt->execute();
 			$result=$stmt->fetchAll();
 
 			if($stmt->rowCount() >= 1) {// investigador existe

@@ -17,7 +17,7 @@
 	//Ejecutamos el modelo
     // require("adminModel.php");
 
-	session_start("igp_inv");
+	session_start("inv_igp");
 
     function ini(){
         $objResponse     = new xajaxResponse();

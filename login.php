@@ -8,7 +8,7 @@
     date_default_timezone_set('America/Lima');
     require("indexSearch.php");
     require("adminModel.php");
-    session_start();
+    session_start("inv_igp");
     function book_reserva(){
         $html="";
         if (isset($_SESSION["reserva"])) {
@@ -54,8 +54,8 @@
         }
         else {
             header("Location: ./index.php");exit;
-        }   
-       
+        }
+
     }
     else{
        $xajax->processRequest();

@@ -10,7 +10,7 @@
     require("indexSearch.php");
     require("adminModel.php");
 
-    session_start();
+    session_start("inv_igp");
 
     function manageError(){
 

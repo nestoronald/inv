@@ -5,7 +5,7 @@
  require ('../class/smarty/Smarty.class.php');
  require ("../class/Security.php");
 
- session_start();
+ session_start("inv_igp");
  // secure_session_start(); // Our custom secure way of starting a php session.
 
  $t_hasher = new PasswordHash(8, FALSE);
@@ -26,7 +26,7 @@
            // Login success
            //$msj_success = "Acceso correcto";
            $_SESSION["iduser"] = 1;
-           $_SESSION["username"] = $user;           
+           $_SESSION["username"] = $user;
            if (isset($_SESSION["reserva"])) {
                header("Location: ./reservation.php");exit;
            }

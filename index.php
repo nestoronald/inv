@@ -16,36 +16,35 @@
 
 	//Ejecutamos el modelo
     // require("adminModel.php");
+    session_name("inv");
+	session_start();
 
-	session_start("inv_igp");
+    // function ini(){
+    //     $objResponse     = new xajaxResponse();
+    //     session_start();
+    //     $_SESSION["origin"]="frond";
+    //     $objResponse    ->script("
+    //                         xajax_searchCategory('frond')");
 
-    function ini(){
-        $objResponse     = new xajaxResponse();
-        session_name("bib_index");
-        session_start();
-        $_SESSION["origin"]="frond";
-        $objResponse    ->script("
-                            xajax_searchCategory('frond')");
-
-        $objResponse   ->script("$('[rel=propover]').popover({
-                                        animation : 0.05 ,
-                                        placement : 'top',
-                                        trigger: 'hover',
-                                        title:'Contáctenos',
-                                        html:'true',
-                                        content :\"Cualquier consulta escribanos a <span class='emailigp'>web@igp.gob.pe</span>\"
-                                        });
-                                ");
-        // $objResponse->alert(print_r($_SESSION,true));
-        return $objResponse   ;
-    }
-
+    //     $objResponse   ->script("$('[rel=propover]').popover({
+    //                                     animation : 0.05 ,
+    //                                     placement : 'top',
+    //                                     trigger: 'hover',
+    //                                     title:'Contáctenos',
+    //                                     html:'true',
+    //                                     content :\"Cualquier consulta escribanos a <span class='emailigp'>web@igp.gob.pe</span>\"
+    //                                     });
+    //                             ");
+    //     // $objResponse->alert(print_r($_SESSION,true));
+    //     return $objResponse   ;
+    // }
 
 
 
-    $xajax->registerFunction('ini');
-    $xajax->registerFunction('menu_main');
-    $xajax->registerFunction('show_details');
+
+    // $xajax->registerFunction('ini');
+    // $xajax->registerFunction('menu_main');
+    // $xajax->registerFunction('show_details');
 
 	$xajax->processRequest();
 

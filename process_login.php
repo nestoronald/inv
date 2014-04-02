@@ -5,7 +5,7 @@
  require ('../class/smarty/Smarty.class.php');
  require ("../class/Security.php");
 
- session_start("inv_igp");
+ session_start();
  // secure_session_start(); // Our custom secure way of starting a php session.
 
  $t_hasher = new PasswordHash(8, FALSE);

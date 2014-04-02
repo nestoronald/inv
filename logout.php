@@ -6,7 +6,7 @@
  require ("../class/Security.php");
 
 
- session_start("inv_igp");
+ session_start();
 
  $t_hasher = new PasswordHash(8, FALSE);
  $hash1 = $t_hasher->HashPassword("loginfailed");

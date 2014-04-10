@@ -18,26 +18,26 @@
 <div class="span4">
     <h4 class="title1">Blog</h4>
     <ul>
-    <li><a class="thumb" href="#"><img src="./static/img/timthumb.jpeg" alt=""> </a><span class="title"><a href="http://www.ceab.csic.es/web/?p=13358" rel="bookmark">Climate change and Mediterranean seagrass meadows: a synopsis for environmental managers</a></span><br><span class="wpldate">March 3, 2014</span></li>
-    <li><a class="thumb" href="#"><img src="./static/img/timthumb-02.jpeg" alt=""> </a><span class="title"><a href="http://www.ceab.csic.es/web/?p=13327" rel="bookmark">INSPIRACIENCIA</a></span><br><span class="wpldate">February 27, 2014</span></li>
-    <li><a class="thumb" href="#" title="Buscamos Técnico Superior de Grado II (Formación Profesional II), con perfil en " informatica="" y="" comunicaciones""=""><img src="./static/img/timthumb-03.jpeg" alt=""> </a><span class="title"><a href="http://www.ceab.csic.es/web/?p=13111" rel="bookmark">Buscamos Técnico Superior de Grado II (Formación Profesional II), con perfil en “Informatica y Comunicaciones”</a></span><br><span class="wpldate">February 24, 2014</span></li>
+    <li><a href="#"><img src="./static/img/timthumb.jpeg"> </a><span><a href="http://www.ceab.csic.es/web/?p=13358" >Climate change and Mediterranean seagrass meadows: a synopsis for environmental managers</a></span><br><span >March 3, 2014</span></li>
+    <li><a href="#"><img src="./static/img/timthumb-02.jpeg"> </a><span><a href="http://www.ceab.csic.es/web/?p=13327" >INSPIRACIENCIA</a></span><br><span >February 27, 2014</span></li>
+    <li><a href="#" ><img src="./static/img/timthumb-03.jpeg"> </a><span><a href="http://www.ceab.csic.es/web/?p=13111" >Buscamos Técnico Superior de Grado II (Formación Profesional II), con perfil en “Informatica y Comunicaciones”</a></span><br><span >February 24, 2014</span></li>
 
     </ul>
 </div>
 <div class="span4">
     <h4 class="title1">Publicaciones</h4>
     <ul>
-    <li><a class="thumb" href="#" title="“Connectivity of coral reef populations:  you can't always get where you want”"><img src="./static/img/timthumb-02.jpeg" alt=""> </a><span class="title"><a href="http://www.ceab.csic.es/web/?p=13374" rel="bookmark">“Connectivity of coral reef populations:  you can’t always get where you want”</a></span><br><span class="wpldate">March 5, 2014</span></li>
-    <li><a class="thumb" href="#" title="Què aporta la genètica a l’estudi de les espècies marines invasores a Europa?"><img src="./static/img/timthumb.01.jpeg" alt=""> </a><span class="title"><a href="http://www.ceab.csic.es/web/?p=13348" rel="bookmark">Què aporta la genètica a l’estudi de les espècies marines invasores a Europa?</a></span><br><span class="wpldate">February 28, 2014</span></li>
-    <li><a class="thumb" href="#" title="“Fine Particle Transport and Retention in Streams: Particulate Organic Carbon Dynamics and Pathogen Transmission”"><img src="./static/img/timthumb-03.jpeg" alt=""> </a><span class="title"><a href="http://www.ceab.csic.es/web/?p=13287" rel="bookmark">“Fine Particle Transport and Retention in Streams: Particulate Organic Carbon Dynamics and Pathogen Transmission”</a></span><br><span class="wpldate">February 10, 2014</span></li>
+    <li><a href="#"><img src="./static/img/timthumb-02.jpeg"> </a><a href="http://www.ceab.csic.es/web/?p=13374" >“Connectivity of coral reef populations:  you can’t always get where you want”</a><br><span >March 5, 2014</span></li>
+    <li><a href="#" ><img src="./static/img/timthumb-03.jpeg"> </a><span><a href="#" >Qué aporta la genètica a l’estudi de les espècies marines invasores a Europa?</a></span><br><span >February 28, 2014</span></li>
+    <li><a href="#"><img src="./static/img/timthumb-03.jpeg"> </a><span><a href="#" >“Fine Particle Transport and Retention in Streams: Particulate Organic Carbon Dynamics and Pathogen Transmission”</a></span><br><span >February 10, 2014</span></li>
     </ul>
 </div>
 <div class="span4">
     <h4 class="title1">Noticias</h4>
     <ul>
-    <li><a class="thumb" href="#" title="Buscamos Técnico Superior de Grado II (Formación Profesional II), con perfil en " informatica="" y="" comunicaciones""=""><img src="./static/img/timthumb-03.jpeg" alt=""> </a><span class="title"><a href="http://www.ceab.csic.es/web/?p=13111" rel="bookmark">Buscamos Técnico Superior de Grado II (Formación Profesional II), con perfil en “Informatica y Comunicaciones”</a></span><br><span class="wpldate">February 24, 2014</span></li>
-    <li><a class="thumb" href="#" title="Prospeccions de gas i petroli a les Balears."><img src="./static/img/timthumb-02.jpeg" alt=""> </a><span class="title"><a href="http://www.ceab.csic.es/web/?p=13309" rel="bookmark">Prospeccions de gas i petroli a les Balears.</a></span><br><span class="wpldate">February 19, 2014</span></li>
-    <li><a class="thumb" href="#">  </a><span class="title"><a href="http://www.ceab.csic.es/web/?p=13252" rel="bookmark"><img src="./static/img/timthumb-01.jpeg" alt="">Xerrada-col·loqui: “S’Abanell: Sorra o roques? Sis anys després”</a></span><br><span class="wpldate">February 4, 2014</span></li>
+    <li><a href="#"><img src="./static/img/timthumb-03.jpeg"> </a><a href="#" >Buscamos Técnico Superior de Grado II (Formación Profesional II), con perfil en “Informatica y Comunicaciones”</a><br><span >February 24, 2014</span></li>
+    <li><a href="#" ><img src="./static/img/timthumb-02.jpeg"> </a><span><a href="#" >Prospeccions de gas i petroli a les Balears.</a></span><br><span >February 19, 2014</span></li>
+    <li><a href="#">  </a><span><a href="#" ><img src="./static/img/timthumb.jpeg" >Xerrada-col·loqui: “S’Abanell: Sorra o roques? Sis anys després”</a></span><br><span >February 4, 2014</span></li>
     </ul>
 <p></p>
 </div>

@@ -197,7 +197,7 @@
 				break;
 		}
 		// $idauthor = 523;
-		if ($stmt = $dbh->prepare("SELECT * FROM v_publicacion_autor  WHERE idautor = ? ")) {
+		if ($stmt = $dbh->prepare("SELECT * FROM v_publicacion_autor  WHERE idautor = ? ORDER BY year_pub DESC  ")) {
 			$stmt->execute(array($idauthor));
 			// $stmt->execute();
 			$result=$stmt->fetchAll();

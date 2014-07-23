@@ -15,8 +15,8 @@
 
 	function ListInvQuery($name=""){
 
-		// $dbh=conn_0("10.10.30.27","personal","wmaster","igpwmaster");
-		$dbh=conn("personal","wmaster","igpwmaster");
+		$dbh=conn_0("10.10.30.27","personal","wmaster","igpwmaster");
+		// $dbh=conn("personal","wmaster","igpwmaster");
 		$dbh->query("SET NAMES 'utf8'");
 	    $sql = "SELECT * FROM v_empleado_investigador ";
 	    // $sql = "SELECT * FROM v_investigadores ";
@@ -53,8 +53,8 @@
 	    return $result;
 	}
 	function InvQueryId($id=0){
-		// $dbh=conn_0("10.10.30.27","personal","wmaster","igpwmaster");
-		$dbh=conn("personal","wmaster","igpwmaster");
+		$dbh=conn_0("10.10.30.27","personal","wmaster","igpwmaster");
+		// $dbh=conn("personal","wmaster","igpwmaster");
 		$dbh->query("SET NAMES 'utf8'");
 		if ($stmt = $dbh->prepare("SELECT * FROM v_empleado_investigador WHERE idempleado = ? LIMIT 1")) {
 		// if ($stmt = $dbh->prepare("SELECT * FROM v_investigadores  LIMIT 1")) {
@@ -137,8 +137,8 @@
 	}
 
 	function PublicationQuery($id=0){
-		// $dbh=conn_0("10.10.30.25","DB_ITS","wmaster","igpwmaster");
-		$dbh=conx("DB_ITS","wmaster","igpwmaster");
+		$dbh=conn_0("10.10.30.25","DB_ITS","wmaster","igpwmaster");
+		// $dbh=conx("DB_ITS","wmaster","igpwmaster");
 		$dbh->query("SET NAMES 'utf8'");
 		switch ($id) {
 			//Woodman

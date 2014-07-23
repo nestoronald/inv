@@ -30,10 +30,6 @@
                     <div class="navbar igp-inverse">
                         <div class="navbar-inner">
                             <div class="navbar-header inline line">
-                            <button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
-                                <span class="caret"></span>
-                               <span>Menu</span>
-                            </button>
                             <a class="navbar-brand inline fleft title" href="index.php"><h4>Investigadores</h4></a>
                             <form class="navbar-form inline" method="post" action="investigadores.php">
                                 <input type="text" name="nombre" placeholder="Buscar Investigadores" class="form-control search-input span4">

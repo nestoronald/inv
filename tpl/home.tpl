@@ -44,13 +44,13 @@
 </div>
 <div class="container-fluid igp-bottom">
     <div class="span3 igp-panel-box">
-        <p class="text-large"><a title="Catálogo de Biblioteca - IGP" target="_blank" href="#"> <img border="0" alt="" src="./static/img/logo-biblioteca.jpg"></a></p>
+        <p class="text-large"><a title="Catálogo de Biblioteca - IGP" target="_blank" href="http://www.igp.gob.pe/biblioteca"> <img border="0" alt="" src="./static/img/logo-biblioteca.jpg"></a></p>
     </div>
     <div class="span3 igp-panel-box" >
         <p class="text-large"><a title="Buscador Cientifico" target="_blank" href="http://directorio.concytec.gob.pe/buscadorcientifico/#busquedaCtel"> <img border="0" alt="" src="./static/img/buscador-cientifico.jpg"></a></p>
     </div>
     <div class="span3 igp-panel-box" >
-        <p class="text-large"><a title="Publicaciones IGP" target="_blank" href="#"> <img border="0" alt="" src="./static/img/publicaciones-igp.jpg"></a></p>
+        <p class="text-large"><a title="Publicaciones IGP" target="_blank" href="http://www.igp.gob.pe/its/index.php?idfrom=1&pag=1"> <img border="0" alt="" src="./static/img/publicaciones-igp.jpg"></a></p>
     </div>
     <div class="span3 igp-panel-box" >
         <p class="text-large"><a title="Eventos Cientificos" target="_blank" href="http://www.igp.gob.pe/portal/images/documents/daa/aa/eventose/calendarioact.pdf"> <img border="0" alt="" src="./static/img/eventos-cientificos.jpg"></a></p>
